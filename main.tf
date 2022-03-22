@@ -20,6 +20,14 @@ resource "aws_instance" "mywebserver" {
   availability_zone = "us-east-2c"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.mywebserver.id]
+provisioner "file" {
+  source = "docker-compose.yml"
+  destination = "/tmp/docker-compose.yml"
+}
+provisioner "file" {
+  source = "prometheus.yml"
+  destination = "/tmp/prometheus.yml"
+}  
   
     connection {
       type     = "ssh"
