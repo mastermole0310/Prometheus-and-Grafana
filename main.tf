@@ -27,8 +27,11 @@ provisioner "file" {
 provisioner "file" {
   source = "prometheus.yml"
   destination = "/tmp/prometheus.yml"
+} 
+provisioner "file" {
+  source = "all.yml"
+  destination = "/tmp/all.yml" 
 }  
-  
     connection {
       type     = "ssh"
       user     = "ubuntu"
