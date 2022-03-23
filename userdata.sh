@@ -1,7 +1,7 @@
 #!/bin/bash
 # Обновление сервера
-apt upgrade -y
 apt-get update
+apt upgrade -y
 # Установка ssh подключения
 apt install openssh-server -y
 # Включение службы ssh
