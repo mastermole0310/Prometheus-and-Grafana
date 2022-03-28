@@ -2,6 +2,8 @@
 # Обновление сервера
 apt-get update
 apt upgrade -y
+# Установка jq
+apt install jq -y
 # Установка ssh подключения
 apt install openssh-server -y
 # Включение службы ssh

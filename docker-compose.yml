@@ -32,14 +32,10 @@ services:
     image: prom/pushgateway
     container_name: pushgateway
     restart: unless-stopped
-    expose:
-      - 9091
     ports:
       - "8082:9091"
     networks:
       - monitor-net
-    labels:
-    org.label-schema.group: "monitoring"
 
   grafana:
     image: grafana/grafana:latest
