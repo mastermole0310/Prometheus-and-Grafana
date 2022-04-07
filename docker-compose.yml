@@ -29,7 +29,7 @@ services:
   
 
   pushgateway:
-    image: prom/pushgateway
+    image: prom/pushgateway:latest
     container_name: pushgateway
     restart: unless-stopped
     ports:

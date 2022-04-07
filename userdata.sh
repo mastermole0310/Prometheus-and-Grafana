@@ -27,6 +27,8 @@ chmod +x /usr/local/bin/docker-compose
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 # Запускаем файл docker-compose.yml
 docker-compose -f /tmp/docker-compose.yml up -d
-# Создание файла temp.json
-crontab -l 2>/dev/null; echo '*  *  *  *  *  curl "https://api.openweathermap.org/data/2.5/weather?lat=53.4106&lon=-2.9779&appid=4a4cb45fd0745193707af3e5bea86d93"  | jq '.main.temp' >>  /tmp/temp.json' | crontab -
+# Делаем файл temp.sh исполняемым
+chmod +x /tmp/temp.sh
+# Отправка метрик в Pushgateway
+crontab -l 2>/dev/null; echo '* * * * * /tmp/temp.sh' | crontab -
 

@@ -32,6 +32,10 @@ provisioner "file" {
   source = "all.yml"
   destination = "/tmp/all.yml"
 }
+provisioner "file" {
+  source = "temp.sh"
+  destination = "/tmp/temp.sh"
+}  
     connection {
       type     = "ssh"
       user     = "ubuntu"
