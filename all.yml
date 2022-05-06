@@ -1,4 +1,0 @@
-- name: 'prometheus'
-  type: 'prometheus'
-  access: 'proxy'
-  url: 'http://prometheus:9090'

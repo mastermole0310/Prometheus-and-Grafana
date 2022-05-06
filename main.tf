@@ -40,7 +40,7 @@ provisioner "file" {
       type     = "ssh"
       user     = "ubuntu"
       host = self.public_ip
-      private_key = file("C:/Users/алексей/Desktop/alex.pem")
+      private_key = file("C:/Users/алексей/Desktop/alexs.pem")
     } 
 
     
@@ -48,7 +48,7 @@ provisioner "file" {
   user_data = file("userdata.sh")
 
 
-  key_name = "alex"
+  key_name = "alexs"
   tags = {
     Name = "mastermole0310"
   }
